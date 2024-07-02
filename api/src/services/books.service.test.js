@@ -1,0 +1,22 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+const BooksService = require("./books.service");
+
+describe("Test for BooksService", () => {
+  let service;
+
+  beforeEach(() => {
+    service = new BooksService();
+  });
+
+  describe("test for getBooks", () => {
+    test("should return a book list", async () => {
+      // Arrange
+      // Act
+      const books = await service.getBooks();
+      console.log(books);
+      // Assert
+      expect(books.length).toEqual(2);
+    });
+  });
+});
